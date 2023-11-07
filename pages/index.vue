@@ -1,8 +1,64 @@
 <template>
     <Navbar />
     <div class="min-h-[92vh] pt-[50px] min-w-screen">
-        <div class="flex justify-center">
-            <img class="w-[95%] mt-[30px]" src="/img/poster-news.png">
+        <div class="flex justify-center mt-[30px] space-x-5 mx-6 lg:justify-between lg:items-start">
+            <img class="w-[95%] lg:w-[40rem] lg:object-contain" src="/img/poster-news.png">
+
+            <!--More News Box Desktop-->
+            <div class="bg-[#8888] min-w-[17rem] w-full max-h-[28.3rem] py-7 px-6 hidden lg:block overflow-y-auto">
+                <h1 class="text-black text-[30px] font-bold">ข่าวอื่นๆ</h1>
+
+                <div class="my-5 space-y-3">
+                    <div class="min-w-full flex items-center">
+                        <div class="pr-5">
+                            <img class="w-[200px]" src="/img/time.png">
+                        </div>
+                        <div class="flex justify-end">
+                            <h4 class="text-[20px] font-bold text-black max-w-[280px]">
+                                หูแตก!! พรี่ไทม์ก่อเกียรติร้องคาราโอเกะดังมิดแอมป์ เพื่อนบาดเจ็บสาหัส
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="min-w-full flex items-center">
+                        <div class="pr-5">
+                            <img class="w-[200px]" src="/img/pipe170.png">
+                        </div>
+                        <div class="flex justify-end">
+                            <h4 class="text-[20px] font-bold text-black max-w-[280px]">
+                                พัง!! ไปร์สง่ะทำจอไอโฟนน้องม.4แตก เหตุเสริฟวอลเลย์โดนหลัง สูญราว $170
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="min-w-full flex items-center">
+                        <div class="pr-5">
+                            <img class="w-[200px]" src="/img/pipe-like.png">
+                        </div>
+                        <div class="flex justify-end">
+                            <h4 class="text-[20px] font-bold text-black max-w-[280px]">
+                                ดีใจจนยกนิ้ว!! น้องไปร์สสารวิทยาแข่ง A-Math ได้รางวัลชนะเลิศ พ่อแม่กลั้นน้ำตาไม่อยู่
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Text Size Button Desktop-->
+            <div
+                class="w-[3rem] h-[130px] bg-[#8888] rounded-[20px] mb-6  flex-col items-center space-y-3 px-2 justify-center hidden lg:flex">
+                <div class="text-[12px] flex justify-center border-b border-[#000] pb-2"
+                    :class="{ 'text-blue-600': textSize == 12 }">
+                    <button class="fas fa-font" @click="textSize12"></button>
+                </div> <!--Row1-->
+
+                <div class="text-[16px] flex justify-center border-b border-[#000] pb-2"
+                    :class="{ 'text-blue-600': textSize == 16 }">
+                    <button class="fas fa-font" @click="textSize16"></button>
+                </div> <!--Row2-->
+
+                <div class="text-[25px] flex justify-center" :class="{ 'text-blue-600': textSize == 25 }">
+                    <button class="fas fa-font" @click="textSize25"></button>
+                </div> <!--Row3-->
+            </div>
         </div>
         <!--Date-->
         <div class="flex justify-between items-center mt-5">
@@ -11,7 +67,8 @@
             </div>
 
             <!--Text Size Button-->
-            <div class="h-[3rem] min-w-[150px] bg-[#8888] rounded-[20px] mr-6 grid grid-cols-3 items-center space-x-1 px-2">
+            <div
+                class="h-[3rem] min-w-[150px] bg-[#8888] rounded-[20px] mr-6 grid grid-cols-3 items-center space-x-1 px-2 lg:hidden">
                 <div class="text-[12px] flex justify-center border-r border-[#000] pr-2"
                     :class="{ 'text-blue-600': textSize == 12 }">
                     <button class="fas fa-font" @click="textSize12"></button>
@@ -30,7 +87,7 @@
 
         <!--Horizon line-->
         <div class="min-w-full flex justify-center my-5">
-            <div class="bg-[#8888] w-[25rem] h-[2px]"></div>
+            <div class="bg-[#8888] w-[25rem] h-[2px] lg:w-[80%]"></div>
         </div>
 
         <!--News body-->
@@ -95,11 +152,11 @@
 
         <!--Horizon line-->
         <div class="min-w-full flex justify-center mt-[50px] mb-[20px]">
-            <div class="bg-[#8888] w-[25rem] h-[2px]"></div>
+            <div class="bg-[#8888] w-[25rem] h-[2px] lg:hidden"></div>
         </div>
 
-        <!--More News Box-->
-        <div class="bg-[#8888] min-w-full py-7 px-6">
+        <!--More News Box Mobile-->
+        <div class="bg-[#8888] min-w-full py-7 px-6 lg:hidden">
             <h1 class="text-black text-[30px] font-bold">ข่าวอื่นๆ</h1>
 
             <div class="my-5 space-y-3">
