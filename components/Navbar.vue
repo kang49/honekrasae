@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-black min-h-max w-full px-2transition-all duration-500 px-2"
-        :class="{ 'h-[15rem]': isToggleMenu, 'h-[1rem]': !isToggleMenu }">
+    <div class="bg-black min-h-max w-full px-2 transition-all duration-500"
+        :class="{ 'h-[15rem]': isToggleMenu, 'h-[4rem]': !isToggleMenu }">
         <div class="flex justify-between">
             <div>
                 <img class="w-[3.5rem]" src="/img/honkasae_logo.png" alt="Logo" />
