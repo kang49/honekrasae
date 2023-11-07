@@ -1,6 +1,6 @@
 <template>
     <Navbar />
-    <div class="min-h-[86vh] min-w-screen">
+    <div class="min-h-[92vh] pt-[50px] min-w-screen">
         <div class="flex justify-center">
             <img class="w-[95%] mt-[30px]" src="/img/poster-news.png">
         </div>

@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-black min-h-max w-full px-2 transition-all duration-500"
+    <div class="bg-black min-h-max w-full fixed px-2 transition-all duration-500"
         :class="{ 'h-[15rem]': isToggleMenu, 'h-[4rem]': !isToggleMenu }">
         <div class="flex justify-between">
             <div>
@@ -19,7 +19,8 @@
         </div>
 
         <center>
-            <div class="text-white mt-5 space-y-3">
+            <!--Set h and Condition for make menu details smooth when show-->
+            <div class="text-white mt-5 space-y-3 overflow-hidden transition-all duration-[1000ms] h-0" :class="{'h-[200px]': isToggleMenu}">
                 <h4 v-if="isToggleMenu">ไม่มีอะไรแล้ว</h4>
                 <h4 v-if="isToggleMenu">มันมีแค่ข่าวเดียวอะ</h4>
                 <h4 v-if="isToggleMenu">ขี้เกียจทำต่อ</h4>
