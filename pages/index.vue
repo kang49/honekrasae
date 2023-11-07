@@ -12,27 +12,34 @@
 
             <!--Text Size Button-->
             <div class="h-[3rem] min-w-[150px] bg-[#8888] rounded-[20px] mr-6 grid grid-cols-3 items-center space-x-1 px-2">
-                <div class="text-[12px] flex justify-center border-r border-[#000] pr-2" :class="{'text-blue-600': textSize == 12}">
+                <div class="text-[12px] flex justify-center border-r border-[#000] pr-2"
+                    :class="{ 'text-blue-600': textSize == 12 }">
                     <button class="fas fa-font" @click="textSize12"></button>
                 </div> <!--Col1-->
 
-                <div class="text-[16px] flex justify-center border-r border-[#000] pr-2" :class="{'text-blue-600': textSize == 16}">
+                <div class="text-[16px] flex justify-center border-r border-[#000] pr-2"
+                    :class="{ 'text-blue-600': textSize == 16 }">
                     <button class="fas fa-font" @click="textSize16"></button>
                 </div> <!--Col2-->
 
-                <div class="text-[25px] flex justify-center" :class="{'text-blue-600': textSize == 25}">
+                <div class="text-[25px] flex justify-center" :class="{ 'text-blue-600': textSize == 25 }">
                     <button class="fas fa-font" @click="textSize25"></button>
                 </div> <!--Col3-->
             </div>
         </div>
 
+        <!--Horizon line-->
         <div class="min-w-full flex justify-center my-5">
             <div class="bg-[#8888] w-[25rem] h-[2px]"></div>
         </div>
 
         <!--News body-->
+        <div class="w-full flex justify-start px-6 text-[25px] font-bold mb-5">
+            <h4>ระวัง!! ตกเป็นผู้ต้องหาไม่รู้ตัว จากการขายบัญชีม้าให้มิจฉาชีพ</h4>
+        </div>
         <div class="min-w-full flex justify-center">
-            <div class="w-[90%] h-max text-black" :class="{'text-[12px]': textSize == 12}, {'text-[16px]': textSize == 16}, {'text-[25px]': textSize == 25}">
+            <div class="w-[90%] h-max text-black"
+                :class="{ 'text-[12px]': textSize == 12 }, { 'text-[16px]': textSize == 16 }, { 'text-[25px]': textSize == 25 }">
                 <!--ส่วน1-->
                 <h4><b>รู้จัก “บัญชีม้า” เครื่องมือประกอบการก่อเหตุที่สำคัญของเหล่ามิจฉาชีพ
                         แต่ขณะเดียวกันก็สามารถใช้เป็นทริคเอาตัวรอดจากการตกเป็นเหยื่อได้ พร้อมเปิดโทษหนักทั้งปรับและจำคุก
@@ -82,11 +89,55 @@
             <button v-if="!isreadmoreBTN"
                 class="w-[6rem] h-[2rem] text-[#0082F6] border-[2px] border-[#0082F6] flex justify-center items-center rounded-[20px]"
                 @click="readmoreToggle">
-            <h4>อ่านต่อ</h4>
-        </button>
+                <h4>อ่านต่อ</h4>
+            </button>
+        </div>
+
+        <!--Horizon line-->
+        <div class="min-w-full flex justify-center mt-[50px] mb-[20px]">
+            <div class="bg-[#8888] w-[25rem] h-[2px]"></div>
+        </div>
+
+        <!--More News Box-->
+        <div class="bg-[#8888] min-w-full py-7 px-6">
+            <h1 class="text-black text-[30px] font-bold">ข่าวอื่นๆ</h1>
+
+            <div class="my-5 space-y-3">
+                <div class="min-w-full flex items-center">
+                    <div class="pr-5">
+                        <img class="w-[200px]" src="/img/time.png">
+                    </div>
+                    <div class="flex justify-end">
+                        <h4 class="text-[20px] font-bold text-black max-w-[280px]">
+                            หูแตก!! พรี่ไทม์ก่อเกียรติร้องคาราโอเกะดังมิดแอมป์ เพื่อนบาดเจ็บสาหัส
+                        </h4>
+                    </div>
+                </div>
+                <div class="min-w-full flex items-center">
+                    <div class="pr-5">
+                        <img class="w-[200px]" src="/img/pipe170.png">
+                    </div>
+                    <div class="flex justify-end">
+                        <h4 class="text-[20px] font-bold text-black max-w-[280px]">
+                            พัง!! ไปร์สง่ะทำจอไอโฟนน้องม.4แตก เหตุเสริฟวอลเลย์โดนหลัง สูญราว $170
+                        </h4>
+                    </div>
+                </div>
+                <div class="min-w-full flex items-center">
+                    <div class="pr-5">
+                        <img class="w-[200px]" src="/img/pipe-like.png">
+                    </div>
+                    <div class="flex justify-end">
+                        <h4 class="text-[20px] font-bold text-black max-w-[280px]">
+                            ดีใจจนยกนิ้ว!! น้องไปร์สสารวิทยาแข่ง A-Math ได้รางวัลชนะเลิศ พ่อแม่กลั้นน้ำตาไม่อยู่
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<Footer /></template>
+    <Footer />
+</template>
 
 <script>
 export default {
