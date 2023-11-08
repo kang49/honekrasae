@@ -89,6 +89,14 @@
         <div class="min-w-full flex justify-center my-5">
             <div class="bg-[#8888] w-[25rem] h-[2px] lg:w-[80%]"></div>
         </div>
+        <div class="min-w-full flex justify-end" v-show="!ads1Close">
+            <div class="fixed flex w-[200px] h-[200px] bg-teal-600 text-white lg:w-[300px] lg:h-[300px]">
+                <div class="w-full h-full bg-slate-600 flex justify-center items-center text-[25px] lg:text-[40px]">
+                    <h1>พื้นที่ทำมาหากิน</h1>
+                </div>
+                <button @click="Ads1Close" class="fas fa-times absolute ml-[11rem] mt-2 text-[25px] lg:text-[40px] lg:ml-[16.5rem]"></button>
+            </div>
+        </div>
 
         <!--News body-->
         <div class="w-full flex justify-start px-6 text-[25px] font-bold mb-5">
@@ -203,12 +211,14 @@ export default {
         return {
             isreadmoreBTN: false,
             textSize: 16,
+            ads1Close: false,
         }
     },
     methods: {
         readmoreToggle() {
             this.isreadmoreBTN = true;
         },
+
         textSize12() {
             this.textSize = 12;
         },
@@ -217,6 +227,10 @@ export default {
         },
         textSize25() {
             this.textSize = 25;
+        },
+
+        Ads1Close() {
+            this.ads1Close = true;
         }
     }
 }
