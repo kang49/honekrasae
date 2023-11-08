@@ -1,6 +1,17 @@
 <template>
     <Navbar />
     <div class="min-h-[92vh] pt-[50px] min-w-screen">
+        <div class="min-w-full flex justify-center my-5 bg-red-500">
+            <div class="min-w-full justify-end hidden md:flex" v-show="!ads1Close">
+                <div class="fixed flex w-[200px] h-[200px] bg-teal-600 text-white md:w-[300px] md:h-[300px]">
+                    <div class="w-full h-full bg-slate-600 flex justify-center items-center text-[25px] md:text-[40px]">
+                        <h1>พื้นที่ทำมาหากิน</h1>
+                    </div>
+                    <button @click="Ads1Close"
+                        class="fas fa-times absolute ml-[11rem] mt-2 text-[25px] md:text-[40px] md:ml-[16.5rem]"></button>
+                </div>
+            </div>
+        </div>
         <div class="flex justify-center mt-[30px] space-x-5 mx-6 lg:justify-between lg:items-start">
             <img class="w-[95%] lg:w-[40rem] lg:object-contain" src="/img/poster-news.png">
 
@@ -36,6 +47,16 @@
                         <div class="flex justify-end">
                             <h4 class="text-[20px] font-bold text-black max-w-[280px]">
                                 ดีใจจนยกนิ้ว!! น้องไปร์สสารวิทยาแข่ง A-Math ได้รางวัลชนะเลิศ พ่อแม่กลั้นน้ำตาไม่อยู่
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="min-w-full flex items-center">
+                        <div class="pr-5">
+                            <img class="w-[200px]" src="/img/pantai.png">
+                        </div>
+                        <div class="flex justify-end">
+                            <h4 class="text-[20px] font-bold text-black max-w-[280px]">
+                                ขอแสดงความเสียใจกับแม่พัน จากการจากไปของเด็กชายแซ่ตั้งอันเนื่องมาจากเล่นกุนขแมร์
                             </h4>
                         </div>
                     </div>
@@ -89,12 +110,13 @@
         <div class="min-w-full flex justify-center my-5">
             <div class="bg-[#8888] w-[25rem] h-[2px] lg:w-[80%]"></div>
         </div>
-        <div class="min-w-full flex justify-end" v-show="!ads1Close">
-            <div class="fixed flex w-[200px] h-[200px] bg-teal-600 text-white lg:w-[300px] lg:h-[300px]">
-                <div class="w-full h-full bg-slate-600 flex justify-center items-center text-[25px] lg:text-[40px]">
+        <div class="min-w-full justify-end flex md:hidden" v-show="!ads1Close">
+            <div class="fixed flex w-[200px] h-[200px] bg-teal-600 text-white md:w-[300px] md:h-[300px]">
+                <div class="w-full h-full bg-slate-600 flex justify-center items-center text-[25px] md:text-[40px]">
                     <h1>พื้นที่ทำมาหากิน</h1>
                 </div>
-                <button @click="Ads1Close" class="fas fa-times absolute ml-[11rem] mt-2 text-[25px] lg:text-[40px] lg:ml-[16.5rem]"></button>
+                <button @click="Ads1Close"
+                    class="fas fa-times absolute ml-[11rem] mt-2 text-[25px] md:text-[40px] md:ml-[16.5rem]"></button>
             </div>
         </div>
 
@@ -167,7 +189,7 @@
         <div class="bg-[#8888] min-w-full py-7 px-6 lg:hidden">
             <h1 class="text-black text-[30px] font-bold">ข่าวอื่นๆ</h1>
 
-            <div class="my-5 space-y-3">
+            <div class="my-5 space-y-3 max-h-[20rem] overflow-y-auto">
                 <div class="min-w-full flex items-center">
                     <div class="pr-5">
                         <img class="w-[200px]" src="/img/time.png">
@@ -195,6 +217,16 @@
                     <div class="flex justify-end">
                         <h4 class="text-[20px] font-bold text-black max-w-[280px]">
                             ดีใจจนยกนิ้ว!! น้องไปร์สสารวิทยาแข่ง A-Math ได้รางวัลชนะเลิศ พ่อแม่กลั้นน้ำตาไม่อยู่
+                        </h4>
+                    </div>
+                </div>
+                <div class="min-w-full flex items-center">
+                    <div class="pr-5">
+                        <img class="w-[200px]" src="/img/pantai.png">
+                    </div>
+                    <div class="flex justify-end">
+                        <h4 class="text-[20px] font-bold text-black max-w-[280px]">
+                            ขอแสดงความเสียใจกับแม่พัน จากการจากไปของเด็กชายแซ่ตั้งอันเนื่องมาจากเล่นกุนขแมร์
                         </h4>
                     </div>
                 </div>
